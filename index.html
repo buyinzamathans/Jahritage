@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jahritage | Digital Store & Direct Import Hub</title>
+  <style>
+    /* General Reset and Base Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background-color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #111;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Trust Features Section */
+    .trust-banner {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ebebeb;
+      padding: 35px 20px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+    .trust-item h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #000;
+    }
+    .trust-item p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Main Product Layout */
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #222;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    /* Individual Product Cards */
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+    }
+    .card-img {
+      background-color: #f2f2f2;
+      height: 220px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 14px;
+    }
+    .card h4 {
+      font-size: 17px;
+      margin: 10px 0;
+      color: #111;
+      line-height: 1.4;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    /* Interactive Buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #fff;
+    }
+    .btn-pay {
+      background-color: #FFCC00;
+      color: #111;
+    }
+
+    /* Footer Information */
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 45px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer h4 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+    footer p {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jahritage</h1>
+  </header>
+
+  <div class="hero">
+    <h2>Smart Gear Built for Daily Life</h2>
+    <p>We gather high-value technical accessories and home utilities from around the world. Every item is carefully selected and dispatched directly to your location in Kampala.</p>
+  </div>
+
+  <div class="trust-banner">
+    <div class="trust-item">
+      <h3>Direct Sourcing</h3>
+      <p>Original items brought in straight from established global manufacturers.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Secure Deposits</h3>
+      <p>Pay a fraction upfront to lock in your order. Clear the rest only upon arrival.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Doorstep Delivery</h3>
+      <p>We handle all cargo clearance and send the package to you using local riders.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Current Catalog</h2>
+    <div class="grid" id="productGrid">
+      <!-- JavaScript will inject the products here -->
+    </div>
+  </div>
+
+  <footer>
+    <h4>Jahritage — Digital Store & Direct Import Hub | Kampala, Uganda</h4>
+    <p>Fast delivery across Kampala, Mukono, and Entebbe. Upcountry dispatch is available on request.</p>
+    <p>Client Support: +256 XXX XXX XXX (Active on WhatsApp)</p>
+  </footer>
+
+  <script>
+    // Product Database
+    const catalogData = [
+      { name: "Universal Clip-On Bluetooth Module", price: "150,000", imagePlaceholder: "[ Audio Kit Image ]" },
+      { name: "Full Smart Bluetooth Helmet", price: "350,000", imagePlaceholder: "[ Smart Helmet Image ]" },
+      { name: "18-Inch Ring Light with Tripod", price: "170,000", imagePlaceholder: "[ Ring Light Image ]" },
+      { name: "Noise-Canceling Wireless Earbuds", price: "100,000", imagePlaceholder: "[ Earbuds Image ]" },
+      { name: "Amoled Display Smartwatch", price: "140,000", imagePlaceholder: "[ Smartwatch Image ]" },
+      { name: "Portable Rechargeable Blender", price: "85,000", imagePlaceholder: "[ Mini Blender Image ]" },
+      { name: "Mini Solar Motion LED Light", price: "85,000", imagePlaceholder: "[ Solar Light Image ]" },
+      { name: "Mini Wireless Security Camera", price: "180,000", imagePlaceholder: "[ CCTV Camera Image ]" }
+    ];
+
+    const gridContainer = document.getElementById("productGrid");
+
+    // Loop through the data and build the layout
+    catalogData.forEach(item => {
+      const cardElement = document.createElement("div");
+      cardElement.className = "card";
+      
+      // Auto-format the WhatsApp text string
+      const orderMessage = encodeURIComponent(`Hello Jahritage! I am interested in the ${item.name} listed at ${item.price} UShs. Let us arrange the deposit.`);
+      
+      cardElement.innerHTML = `
+        <div class="card-img">${item.imagePlaceholder}</div>
+        <h4>${item.name}</h4>
+        <div class="price">${item.price} UShs</div>
+        <a href="https://wa.me/256XXXXXXXXX?text=${orderMessage}" target="_blank" class="btn btn-whatsapp">Order via WhatsApp</a>
+        <button class="btn btn-pay" onclick="alert('This will redirect to the MTN/Airtel payment portal.')">Instant Pay</button>
+      `;
+      gridContainer.appendChild(cardElement);
+    });
+  </script>
+
+</body>
+</html>
